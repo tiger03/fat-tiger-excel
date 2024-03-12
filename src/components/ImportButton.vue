@@ -132,7 +132,7 @@ export default {
           usedExpressNumbers.add(matchedItemB[1]);
           matchedData.push({
             订单号: orderNumberA,
-            快递公司: matchedItemB[2], // 假设B表格中有一个'快递公司'字段
+            快递公司: `${matchedItemB[2]}` === '圆通' ? '圆通快递' : matchedItemB[2], // 假设B表格中有一个'快递公司'字段
             快递单号: matchedItemB[3], // 假设B表格中有一个'快递单号'字段
             刷单表地址: itemA[1], // 假设B表格中有一个'快递公司'字段
             资料库地址: matchedItemB[1], // 假设B表格中有一个'快递公司'字段
